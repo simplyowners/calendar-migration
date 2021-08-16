@@ -3,6 +3,7 @@
 $ROOT = "/var/app/current/legacy";
 $this_page = $_SERVER["REQUEST_URI"];
 $this_page = strtolower($this_page);
+function left($str, $length) {     return substr($str, 0, $length); }
 
 if (left($this_page, 6) == "/ical/") {
     $pieces = explode("/", $this_page);
